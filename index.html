@@ -1,0 +1,380 @@
+<!doctype html>
+<html>
+<head>
+    <title>Nicholas Hyland</title>
+
+    	<meta charset="utf-8" />
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1" />
+		
+		<link rel="shortcut icon" href="icon.ico">
+		
+		<style type="text/css">
+		
+		body {
+			background-color:#191B45;
+			margin:0;
+			font-family:"Source Sans Pro",Tahoma,Arial,sans-serif;
+		}
+
+		#topbar {
+			position:relative;
+			background-color:#161724;
+			width:100%;
+			height:52px;
+			color:white;
+			border-bottom:3px solid #990000;
+		}
+	
+		.fixedwidth {
+			width:1100px;
+			margin:0 auto;
+		}
+			
+		#topmenudiv {
+			float:left;
+			width:100%;
+			overflow:hidden;
+		}
+	
+		#topmenudiv > ul {
+			position:relative;
+			float:left;
+			left:50%;
+			margin:0;
+			padding:0;
+			list-style:none;
+		}
+	
+		#topmenudiv > ul > li {
+			position:relative;
+			float:left;
+			display:block;
+			right:50%;
+			padding:18px 45px 10px 45px;
+			font-size:0.9em;
+			height:100%;
+			display:block;
+			letter-spacing:0.2em;
+			cursor:pointer;
+		}
+			
+		#topmenudiv > ul > li:hover {
+			border-bottom:7px solid white;
+		}
+
+		#topmenudiv ul ul {
+			display:none;
+			position:relative;
+			top:100%;
+			left:0;
+			padding:0;
+			list-style:none;
+			transition: max-height 0.2s ease-out;
+		}
+
+		#topmenudiv ul ul li {
+			float:none;
+			position:relative;
+			background:#161724;
+			text-align:center;
+			top:20px;
+			padding:5px 0 10px 0;
+		}
+
+		#topmenudiv ul ul li:hover {
+			background:white;
+			color:#161724;
+		}
+
+		#topmenudiv ul li:hover > ul {
+			display:block;
+		}
+
+		.mainpage {
+			width:100%;
+			color:white;
+		}
+		
+		#header {
+			position:relative;
+			top:-60px;
+			font-size:4em;
+			text-align:center;
+			margin-bottom:-220px;
+		}
+			
+		.clear {
+			clear:both;
+		}
+		
+		.size {
+			font-size:3em;
+			margin:0;
+		}
+		
+		#name {
+			letter-spacing:0.1em;
+		}
+		
+		#address {
+			margin:0;
+			font-size:0.40em;
+			position:relative;
+			top:-235px;
+			right:135px;
+		}
+		
+		#email {
+			font-size:0.40em;
+			position:relative;
+			top:-295px;
+			left:290px;
+			margin:0;
+		}
+		
+		#resume {
+			padding-top:50px;
+			padding-left:50px;
+		}
+		
+		#box {
+			width:200px;
+			height:200px;
+			background-color:red;
+			display:none;
+			position:relative;
+		}
+		
+		.title {
+			position:relative;
+			top:-30px;
+			font-size:4em;
+			text-align:center;
+			margin-bottom:-80px;
+		}
+		
+		#yourtime {
+			text-align:center;
+			font-size:2em;
+		}
+		
+		#icons {
+			float:left;
+			width:100%;
+			overflow:hidden;
+			position:relative;
+			top:-25px;
+		}
+		
+		#icons ul {
+			position:relative;
+			float:left;
+			display:block;
+			left:50%;
+			margin:0;
+			padding:0px;
+		}
+		
+		#icons li {
+			position:relative;
+			float:left;
+			display:block;
+			right:50%;
+			padding:50px 20px 0px 20px;
+			list-style:none;
+			height:100%;
+			display:inline;
+			letter-spacing:0.2em;
+		}
+		
+		#picture {
+			position:relative;
+		}
+
+		#photoleft {
+			float:left;
+			width:500px;
+			margin: 0 0 2px 40px;
+			border:5px solid black;
+		}
+		
+		#photoright {
+			float:right;
+			width:500px;
+			margin: 0 40px 2px 0px;
+			border:5px solid black;
+		}
+
+		#photocenter {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 1010px;
+			margin-bottom:2px;
+			border:5px solid black;
+		}
+
+		#phototext {
+			text-align:center;
+		}
+		
+		</style>
+	
+		
+</head>
+
+<body>
+
+	<script type="text/javascript">
+		
+		function showsection(selected, total) {
+			
+			for (i = 1; i <= total; i++) {	
+				if (selected == i) {
+					document.getElementById("section" + i).style.display = 'block';
+				}
+				else {
+					document.getElementById("section" + i).style.display = 'none';
+				}
+			}
+		}
+		
+	</script>
+
+
+
+
+	<div id="topbar">
+		<div class="fixedwidth">
+			<div id="topmenudiv">
+				<ul>
+					<li onclick="showsection(1, 8)">HOME</li>
+					<li>DOCUMENTS
+						<ul>
+							<li onclick="showsection(2, 8)">Resume</li>
+							<li onclick="showsection(3, 8)">Transcript</li>
+							<li onclick="showsection(4, 8)">Papers</li>
+						</ul>
+					</li>
+					<li onclick="showsection(5, 8)">VIDEOS</li>
+					<li onclick="showsection(6, 8)">PHOTOS</li>
+					<li>GAMES
+						<ul>
+							<li onclick="showsection(7, 8)">Game1</li>
+						</ul>
+					</li>
+					<li onclick="showsection(8, 8)">SOCIAL</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	
+	<div class="clear"></div>
+			
+			
+	<div id="section1">		
+	<div class="mainpage">
+		<div class="fixedwidth">
+			<div id="header"><p id="name"><span class="size">N</span>ICHOLAS <span class="size">H</span>YLAND</p>
+				<p id="address">164 Stanton, Apt. 5A<br />
+					New York, NY 10002</p>
+				<p id="email">nsh263@nyu.edu<br />
+					(914) 338-9945</p>
+			</div>	
+
+			<img id="picture" src="images/picture.jpg" width="500px">
+
+		</div>
+	</div>
+	</div>
+	
+	<div id="section2" style="display:none">
+		<div class="mainpage">
+			<div class="fixedwidth">
+				<div id="resume">
+				<img src="images/resume.png" width="1000px;"/>
+				</div>
+			</div>
+		</div>	
+	</div>
+
+	<div id="section3" style="display:none">
+		<div class="mainpage">
+			<div class="fixedwidth">
+				<div id="resume">
+				<img src="images/transcript1.jpg" width="1000px;"/>
+				<img src="images/transcript2.jpg" width="1000px;"/>
+				</div>
+			</div>
+		</div>	
+	</div>
+
+	<div id="section4" style="display:none">
+		<div class="mainpage">
+			<div class="fixedwidth">
+				<div class="title"><p>PAPERS</p></div>
+			</div>
+		</div>	
+	</div>
+	
+	<div id="section5" style="display:none">
+		<div class="mainpage">
+			<div class="fixedwidth">
+				<div class="title"><p>VIDEOS</p></div>
+			</div>
+		</div>	
+	</div>
+	
+	<div id="section6" style="display:none">
+		<div class="mainpage">
+			<div class="fixedwidth">
+				<div class="title"><p>PHOTOS</p></div><br />
+				<p id="phototext">Below are photographs that I have taken on my iPhone 6 starting in the year of 2015. I intend to continually document my journey through photographs here in the United States.</p>
+				<div id="photos">
+					<img id="photoleft" src="images/photo1.jpg"/>
+					<img id="photoright" src="images/photo2.jpg"/>
+					<img id="photocenter"src="images/photo3.jpg"/>
+					<img id="photoleft" src="images/photo5.jpg"/>
+					<img id="photoright" src="images/photo8.jpg"/>
+					<img id="photocenter" src="images/photo9.jpg"/>
+					<img id="photoleft" src="images/photo6.jpg"/>
+					<img id="photoright" src="images/photo7.jpg"/>
+				</div>
+			</div>
+		</div>	
+	</div>
+	
+	<div id="section7" style="display:none">
+		<div class="mainpage">
+			<div class="fixedwidth">
+				<div class="title"><p>REACTION TESTER</p></div>
+				<p id="yourtime">Your time: <span id="time">0</span>s</p>
+				<div id="box"></div>
+			
+				<script type="text/javascript" src="script.js"></script>
+			</div>
+		</div>
+	</div>
+	
+	<div id="section8" style="display:none">
+		<div class="mainpage">
+			<div class="fixedwidth">
+				<div class="title"><p>SOCIAL MEDIA</p></div>
+				<div id="icons">
+					<ul>
+						<li><a href="https://www.facebook.com/hylandnicholas"><img src="images/facebook.png" width="100px"></a></li>
+						<li><a href="https://www.linkedin.com/in/nicholashyland"><img src="images/linkedin.png" width="100px"></a></li>
+						<li><a href="https://github.com/hyland32"><img src="images/github.png" width="100px"></a></li>
+						<li><a href="https://twitter.com/NicholasHyland"><img src="images/twitter.png" width="100px"></a></li>
+						<li><a href="https://soundcloud.com/nsh263"><img src="images/soundcloud.png" width="100px"></a></li>
+						<li><a href="https://www.instagram.com/nicholas_hyland/"><img src="images/instagram.png" width="100px"></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+
+</body>
+</html>
